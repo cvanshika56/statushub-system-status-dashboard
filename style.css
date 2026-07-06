@@ -1,0 +1,311 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f3f6fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    color:#1f2937;
+}
+
+.container{
+    width:100%;
+    max-width:1000px;
+    background:#ffffff;
+    border:1px solid #dfe5ee;
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+/* Header */
+
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    background:#7cb342;
+    border-radius:50%;
+}
+
+.logo h2{
+    font-size:28px;
+    color:#263238;
+    font-weight:700;
+}
+
+.header-links{
+    font-size:13px;
+    color:#7b8794;
+}
+
+.header-links a{
+    color:#8d99ae;
+    text-decoration:none;
+}
+
+.header-links span{
+    margin:0 8px;
+}
+
+/* Banner */
+
+.status-banner{
+    background:#1ea54c;
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.status-dot{
+    width:12px;
+    height:12px;
+    background:#fff;
+    border-radius:50%;
+    animation:pulse 1.4s infinite;
+}
+
+.status-text h1{
+    color:#fff;
+    font-size:31px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.status-text p{
+    color:#d8ffe3;
+    font-size:14px;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+50%{
+transform:scale(1.5);
+opacity:.5;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* Section Heading */
+
+.section-title{
+    color:#8c96a8;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #e5e9ef;
+    border-radius:12px;
+    padding:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.card-top h3{
+    font-size:22px;
+    color:#2d3748;
+}
+/* Status Badges */
+
+.badge{
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+}
+
+.green{
+    background:#dff7e5;
+    color:#20a54b;
+}
+
+.orange{
+    background:#ffe9cf;
+    color:#d97706;
+}
+
+.red{
+    background:#ffd7d7;
+    color:#d62828;
+}
+
+.gray{
+    background:#ececec;
+    color:#666;
+}
+
+/* Uptime Bars */
+
+.bars{
+    display:grid;
+    grid-template-columns:repeat(20,1fr);
+    gap:2px;
+    margin:15px 0;
+}
+
+.bars span{
+    height:26px;
+    background:#6fd47d;
+    border-radius:2px;
+    animation:grow 1.5s ease;
+}
+
+.warning span:nth-child(16),
+.warning span:nth-child(17),
+.warning span:nth-child(18){
+    background:#ffb347;
+}
+
+@keyframes grow{
+    from{
+        transform:scaleY(.3);
+    }
+    to{
+        transform:scaleY(1);
+    }
+}
+
+.card-footer{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    color:#8d99ae;
+}
+
+/* Incidents */
+
+.incident-box{
+    background:#fff;
+    border:1px solid #e4e8ee;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.incident{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-bottom:1px solid #edf1f5;
+}
+
+.incident:last-child{
+    border-bottom:none;
+}
+
+.incident h4{
+    color:#243447;
+    margin-bottom:6px;
+    font-size:17px;
+}
+
+.incident p{
+    color:#8c97a8;
+    font-size:13px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    margin-top:35px;
+    color:#98a2b3;
+    font-size:13px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:650px){
+
+.top-header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.status-banner{
+    flex-direction:column;
+    text-align:center;
+}
+
+.status-text h1{
+    font-size:26px;
+}
+
+.incident{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+}
